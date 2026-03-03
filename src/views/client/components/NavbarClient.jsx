@@ -48,7 +48,7 @@ const NavbarClient = ({ title, logo, children }) => {
                     onClick={showPanel}
                     className={`
                         absolute lg:hidden transition-all duration-200 ease-in-out cursor-pointer
-                        ${openPanel ? 'z-20 max-md:right-8 max-lg:right-105' : 'z-10 right-8'}
+                        ${openPanel ? 'z-20 max-md:right-8 max-xl:right-105' : 'z-10 right-8'}
                     `}
                 >
                     <PanelLeft
@@ -95,7 +95,7 @@ const NavbarClient = ({ title, logo, children }) => {
                         max-lg:h-screen 
                         max-lg:bg-gray-200 
                         max-lg:text-black
-                        max-lg:w-1/2 max-lg:pt-5
+                        max-lg:w-96 max-lg:pt-5
                         max-lg:top-0 max-lg:right-0
                         lg:ml-auto lg:flex lg:items-center lg:gap-6
                         ${openPanel ? 'translate-x-0' : 'max-lg:translate-x-full'}

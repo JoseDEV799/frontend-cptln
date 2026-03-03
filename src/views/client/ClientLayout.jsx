@@ -23,8 +23,8 @@ const ClientLayout = () => {
             <header
                 className={`
                     flex flex-col
-    items-center
-    justify-center
+                    items-center
+                    justify-center
                     transition-colors duration-300 ease-in-out
                     w-full pt-24 bg-cover bg-center
                     2xl:h-100 xl:h-120 lg:h-80 md:h-80 max-md:h-60
