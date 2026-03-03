@@ -35,7 +35,7 @@ const NavbarClient = ({ title, logo, children }) => {
     return (
         <nav
             className={`
-                fixed top-0 left-0 w-full
+                fixed top-0 left-0 w-full 
                 transition-all duration-300 ease-in-out
                 ${show ? "translate-y-0" : "-translate-y-full"}
                 ${scrolled ? "bg-white backdrop-blur shadow-md" : "bg-transparent"}
@@ -48,7 +48,7 @@ const NavbarClient = ({ title, logo, children }) => {
                     onClick={showPanel}
                     className={`
                         absolute lg:hidden transition-all duration-200 ease-in-out cursor-pointer
-                        ${openPanel ? 'z-20 max-md:right-8 max-lg:right-130' : 'z-10 right-8'}
+                        ${openPanel ? 'z-20 max-md:right-8 max-lg:right-105' : 'z-10 right-8'}
                     `}
                 >
                     <PanelLeft
@@ -60,7 +60,7 @@ const NavbarClient = ({ title, logo, children }) => {
                 </button>
 
                 {/* Titulo y logo del navbar */}
-                <div className={`flex px-10 py-8 items-center gap-2 max-lg:w-full max-xl:w-90 ${openPanel ? 'max-md:bg-gray-200 z-10' : 'max-md:bg-transparent z-0'}`}>
+                <div className={`flex py-8 items-center gap-2 max-md:px-5 max-lg:px-20 max-lg:w-full max-xl:w-90 ${openPanel ? 'max-md:bg-gray-200 z-10' : 'max-md:bg-transparent z-0'}`}>
 
                     {/* Logo del Navbar */}
                     <img
@@ -133,7 +133,7 @@ export const NavbarOption = ({ title, path, isListOptions = false, isOptionChild
     return (
         <li
             className={`
-                relative group cursor-pointer transition-all duration-100 ease-in-out
+                relative group cursor-pointer transition-all duration-100 ease-in-out 
                 ${isOptionChild ? 'lg:py-1 lg:px-5 lg:hover:bg-gray-200 lg:rounded-md' : ''}
             `}
         >
@@ -141,8 +141,8 @@ export const NavbarOption = ({ title, path, isListOptions = false, isOptionChild
             <span
                 onClick={handleClick}
                 className={`
-                    flex items-center   
-                    max-lg:justify-between max-lg:w-full max-lg:text-lg max-lg:py-5 max-lg:px-10
+                    flex items-center
+                    max-lg:justify-between max-lg:w-full max-lg:text-lg max-lg:py-5 max-md:px-5 max-lg:px-10
                     lg:py-2.5 lg:text-nowrap
                 `}
             >
@@ -150,7 +150,7 @@ export const NavbarOption = ({ title, path, isListOptions = false, isOptionChild
 
                 <ChevronDown
                     className={`
-                        transition-transform duration-200 ease-in-out
+                        transition-transform duration-200 ease-in-out lg:size-4 lg:mt-1
                         ${isListOptions ? 'block' : 'hidden'}
                         ${openListOptions ? 'max-lg:rotate-180' : 'max-lg:rotate-0'}
                     `}
